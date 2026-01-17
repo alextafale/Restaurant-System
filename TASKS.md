@@ -1,166 +1,139 @@
-# Tasks – Fin de Semana (Sprint 0)
+# Tasks del Proyecto – Sistema de Gestión de Restaurante
 
-Proyecto: **Restaurant Management System**
-Duración: **Fin de semana (Sprint de arranque)**
+##  Equipo
 
-Objetivo del sprint:
-
-> Tener **la estructura base del proyecto**, backend (Spring Boot) y cliente (Swing), compilando correctamente y con responsabilidades claras por integrante.
-
----
-
-##  Backend – Spring Boot
-
-###  Configuración Base
-
-* [ ] Crear proyecto Spring Boot (`restaurant-management`) con Maven
-* [ ] Configurar `application.yml` (puertos, datasource en H2/MySQL)
-* [ ] Verificar que la aplicación levante correctamente
+* **Alejandro** – Líder técnico / Backend
+* **Justin** – Frontend
+* **Yahir** – Backend
+* **Pascual** – Frontend
+* **Jesús** – API / Spring Boot / Seguridad
 
 ---
 
-###  Seguridad y Configuración Global
+##  Objetivo del archivo
 
-* [ ] Crear paquete `config`
-* [ ] Implementar `SecurityConfig` (estructura básica, sin reglas complejas aún)
-* [ ] Crear `JwtConfig` (claves, expiración, estructura)
-* [ ] Agregar `CorsConfig`
-* [ ] Agregar `SwaggerConfig`
-* [ ] Configurar `ModelMapperConfig`
+Este documento define las **tareas por rol y por integrante** durante todo el semestre. Cada tarea debe reflejarse con commits en el repositorio.
 
 ---
 
-###  Capa Common
+## 🔹 FASE 1 – Planeación y Base (Semanas 1–2)
 
-* [ ] Crear `ApiConstants`
-* [ ] Implementar excepciones base:
+###  Planeación general (TODOS)
 
-    * `BusinessException`
-    * `NotFoundException`
-    * `UnauthorizedException`
-* [ ] Crear `ApiResponse` y `ErrorResponse`
+* Definir alcance del sistema
+* Definir roles de usuario (admin, mesero, cocina, caja)
+* Diagramas UML (casos de uso)
+* Diagrama Entidad-Relación (BD)
+* Crear repositorio Git
+* Definir reglas de commits y ramas
 
----
+###  Alejandro
 
-###  Dominio (CORE)
+* Definir arquitectura general (capas)
+* Estructura inicial del proyecto Spring Boot
+* Configuración base del proyecto
 
-* [ ] Crear modelos de dominio:
+###  Jesús
 
-    * `Usuario`
-    * `Rol`
-    * `Mesa`
-    * `Producto`
-    * `Pedido`
-    * `PedidoDetalle`
-    * `Venta`
-    * `Inventario`
-* [ ] Definir relaciones a nivel dominio (sin JPA todavía)
-* [ ] Crear interfaces de repositorio:
-
-    * `UsuarioRepository`
-    * `PedidoRepository`
-    * `ProductoRepository`
-    * `MesaRepository`
-* [ ] Crear servicios de dominio:
-
-    * `PedidoDomainService`
-    * `VentaDomainService`
-    * `InventarioDomainService`
+* Configurar dependencias del proyecto de Spring Boot (Web, JPA, Security)
 
 ---
 
-###  Application (Casos de Uso)
+##  FASE 2 – Seguridad y Base de Datos (Semanas 3–5)
 
-* [ ] Crear DTOs:
+###  Seguridad y Autenticación
 
-    * `PedidoRequestDTO`
-    * `PedidoResponseDTO`
-    * `LoginRequestDTO`
-    * `LoginResponseDTO`
-* [ ] Crear Mappers:
+#### Jesús
 
-    * `PedidoMapper`
-    * `UsuarioMapper`
-* [ ] Implementar casos de uso:
+* Implementar login
+* Implementar JWT
+* Configurar Spring Security
+* Roles y permisos
 
-    * `CrearPedidoUseCase`
-    * `AgregarProductoUseCase`
-    * `CerrarPedidoUseCase`
-    * `CobrarPedidoUseCase`
-    * `LoginUseCase`
+#### Alejandro
 
----
+* Revisar y validar seguridad
+* Ajustar filtros y configuración
 
-###  Infrastructure
+###  Base de Datos
 
-* [ ] Crear entidades JPA:
+#### Yahir
 
-    * `PedidoEntity`
-    * `ProductoEntity`
-    * `UsuarioEntity`
-* [ ] Implementar repositorios JPA:
+* Crear entidades JPA
+* Relaciones entre tablas
 
-    * `JpaPedidoRepository`
-    * `JpaProductoRepository`
-    * `JpaUsuarioRepository`
-* [ ] Crear seguridad JWT:
+#### Alejandro
 
-    * `JwtProvider`
-    * `JwtFilter`
-* [ ] Crear cliente externo:
-
-    * `PaymentServiceClient` (mock)
+* Validar modelo relacional
+* Optimizar entidades
 
 ---
 
-###  Presentation (API REST)
+##  FASE 3 – Módulos Principales (Semanas 6–10)
 
-* [ ] Crear controladores:
+###  Productos y Menú
 
-    * `AuthController`
-    * `PedidoController`
-    * `VentaController`
-* [ ] Implementar `GlobalExceptionHandler`
+#### Backend
 
----
+* **Yahir**: lógica de productos
+* **Jesús**: endpoints REST
 
-##  Cliente – Swing
+#### Frontend
 
-###  Estructura Base
-
-* [ ] Crear proyecto `restaurant-swing-client`
-* [ ] Configurar `Main.java`
-* [ ] Crear `ApiConfig`
+* **Justin**: interfaz CRUD de productos
 
 ---
 
-###  Vistas
+###  Pedidos
 
-* [ ] `LoginFrame`
-* [ ] `DashboardFrame`
-* [ ] `PedidoPanel`
-* [ ] `CocinaPanel`
+#### Backend
 
----
+* **Alejandro**: lógica de pedidos
 
-###  Controladores y Servicios
+#### API
 
-* [ ] `LoginController`
-* [ ] `PedidoController`
-* [ ] `AuthService`
-* [ ] `PedidoService`
+* **Jesús**: endpoints de pedidos
+
+#### Frontend
+
+* **Pascual**: pantalla de pedidos
 
 ---
 
-###  Utilidades
+##  FASE 4 – Operación del Restaurante (Semanas 11–13)
 
-* [ ] `HttpClientUtil`
-* [ ] `SessionManager`
+###  Cocina
+
+* **Yahir**: estados de pedido
+* **Justin**: vista de cocina
+
+### Inventario
+
+* **Alejandro**: control de inventario
+* **Pascual**: interfaz de inventario
 
 ---
 
-##  Entregable del fin de semana
+##  FASE 5 – Reportes y Cierre (Semanas 14–16)
 
-* Proyecto compila sin errores
-* Estructura completa creada
-* README con instrucciones básicas
+###  Reportes
+
+* **Jesús**: consultas y reportes
+* **Justin + Pascual**: gráficas e interfaces
+
+###  Pruebas y Documentación (TODOS)
+
+* Pruebas funcionales
+* Corrección de errores
+* Manual técnico
+* Manual de usuario
+* Preparar entrega final
+
+---
+
+##  Entregables finales
+
+* Sistema funcional
+* API documentada (Swagger)
+* Evidencia de trabajo por integrante
+* Documentación completa

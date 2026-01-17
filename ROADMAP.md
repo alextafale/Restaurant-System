@@ -1,89 +1,94 @@
-# Roadmap – Restaurant Management System
+# Roadmap – Sistema de Gestión de Restaurante
 
-Equipo:
+## 🗓 Duración del proyecto
 
-* Alejandro
-* Justin
-* Yahir
-* Pascual
-* Jesús
+**1 semestre (16 semanas)**
 
 ---
 
-## 🗓 Semana 1 – Sprint 0 (Fin de Semana)
+## 🟢 Semana 1
 
-**Objetivo:** Estructura base y arquitectura limpia
+* Presentación del proyecto
+* Definir alcance
+* Definir módulos
 
-### Alejandro
+## 🟢 Semana 2
 
-* Arquitectura general del backend
-* Configuración inicial Spring Boot
-* Paquete `config` y `common`
-
-### Justin
-
-* Modelos de dominio (`domain/model`)
-* Repositorios de dominio
-
-### Yahir
-
-* Casos de uso (`application/usecase`)
-* DTOs y Mappers
-
-### Pascual
-
-* Infrastructure:
-
-    * Entidades JPA
-    * Repositorios JPA
-
-### Jesús
-
-* Cliente Swing:
-
-    * Estructura base
-    * Login y Dashboard
+* Diagramas UML
+* Diagrama ER
+* Repositorio Git
 
 ---
 
-## 🗓 Semana 2 – Sprint 1
+## 🟡 Semana 3
 
-**Objetivo:** Flujo básico funcional (login + pedidos)
+* Configuración Spring Boot
+* Configuración BD
 
-* Autenticación JWT funcional
-* Crear pedido desde Swing
-* Listar pedidos
-* Persistencia real en base de datos
+## 🟡 Semana 4
 
----
+* Seguridad (login, JWT)
+* Roles de usuario
 
-## 🗓 Semana 3 – Sprint 2
+## 🟡 Semana 5
 
-**Objetivo:** Ventas e Inventario
-
-* Cerrar pedidos
-* Cobro de pedidos
-* Descuento de inventario
-* Vista de cocina
+* Pruebas de autenticación
+* Ajustes de seguridad
 
 ---
 
-## 🗓 Semana 4 – Sprint 3
+## 🔵 Semana 6
 
-**Objetivo:** Estabilidad y UX
+* Módulo productos (backend)
 
-* Manejo de errores
-* Validaciones
-* Mejoras visuales Swing
-* Pruebas básicas
+## 🔵 Semana 7
+
+* Módulo productos (frontend)
+
+## 🔵 Semana 8
+
+* Módulo pedidos (backend)
+
+## 🔵 Semana 9
+
+* Módulo pedidos (frontend)
+
+## 🔵 Semana 10
+
+* Integración productos + pedidos
 
 ---
 
-## 🗓 Semana 5 – Sprint Final
+## 🟠 Semana 11
 
-**Objetivo:** Entrega final
+* Módulo cocina
 
-* Pruebas integrales
-* Documentación
-* Video demo
-* Preparación para presentación
+## 🟠 Semana 12
+
+* Módulo inventario
+
+## 🟠 Semana 13
+
+* Pruebas operativas
+
+---
+
+## 🔴 Semana 14
+
+* Reportes
+
+## 🔴 Semana 15
+
+* Corrección de errores
+* Optimización
+
+## 🔴 Semana 16
+
+* Documentación final
+* Presentación del proyecto
+
+---
+
+##  Resultado esperado
+
+Un sistema completo, funcional y documentado, con evidencia de trabajo en equipo.
